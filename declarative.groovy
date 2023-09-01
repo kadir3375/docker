@@ -15,7 +15,7 @@ pipeline {
 
                stage('deploy') { 
             steps {
-                  sh "docker run nginx ."
+                  sh "docker run nginx "
             }
                 }
                    
