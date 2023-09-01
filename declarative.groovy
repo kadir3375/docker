@@ -1,12 +1,18 @@
 pipeline {
-    agent any 
+    agent any
     stages {
         stage('pull') { 
             steps {
-                git 'https://github.com/kadir3375/docker.git'
+                git branch: 'main', url: 'https://github.com/kadir3375/docker.git'
             }
  
        }
+       stage('build') { 
+            steps {
+                  sh "docker build -t nginx:tag ."
+            }
+                }
+                 
+        }
        
     }
-}
