@@ -12,7 +12,13 @@ pipeline {
                   sh "docker build -t nginx:tag ."
             }
                 }
-                 
+
+               stage('deploy') { 
+            steps {
+                  sh "docker run nginx ."
+            }
+                }
+                   
         }
        
     }
