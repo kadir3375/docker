@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('pull') { 
             steps {
-                git 'https://github.com/kadir3375/Docker.git'
+                git 'https://github.com/rajatpzade/devops-b27.git'
             }
  
        }
