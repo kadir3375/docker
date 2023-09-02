@@ -9,13 +9,13 @@ pipeline {
        }
        stage('build') { 
             steps {
-                  sh "docker build -t studentapp:tag ."
+                  sh "sudo docker build -t studentapp ."
             }
                 }
 
                stage('deploy') { 
             steps {
-                  sh "docker run studentapp "
+                  sh "sudo docker run -p 8081:8080 studentapp "
             }
                 }
                    
